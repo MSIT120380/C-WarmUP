@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HW4_TestEvenOrOdd_判斷奇數偶數_
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] nums = { 44, 66, 99, 100, 78, 2, 96, 55, 123, 253, 99, 4, 87 };
+            int countEven = CountEven(nums);
+            int countOdd = CountOdd(nums);
+
+            Console.Write("\nnums = ");
+            for (int i = 0; i < nums.Length; i++)
+            {
+                Console.Write(nums[i] + "  ");
+            }
+            Console.WriteLine("\n\nAmounts of even-number: {0}", countEven);
+            Console.WriteLine("\nAmounts of odd-number: {0}\n\n", countOdd);
+
+        }
+        static int CountEven(int[] nums)
+        {
+            int count = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] % 2 == 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+        static int CountOdd(int[] nums)
+        {
+            int count = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] % 2 != 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+    }
+}
