@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 等差
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a=1;
+            int b=0;
+            int c = 9;
+            int i;
+            for (i = 0; i <=(c-a); i += 2)
+            {
+                b =  b+a +i;               
+            }
+              Console.WriteLine(b);
+
+            int d= 1;
+            int e =0;
+            int f = 9;
+            int g = 0;
+            while (g <= (f - d))
+            {
+                e =  d + g;
+                g+= 2;
+                Console.WriteLine(e);
+            }
+           Console.WriteLine(((f-d)/2+1)*(d + e)/2);
+
+           
+        }
+    }
+}
