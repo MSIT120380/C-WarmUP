@@ -1,0 +1,27 @@
+namespace 判斷奇偶數_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] a = { 44, 66, 99, 100, 78, 77, 71 };
+            int x = 1;
+             int y = 1;    
+            for(int d = 0; d < a.Length; d += 1)
+            {
+                if (a[d] % 2 == 0)
+                { 
+                  
+                    x = x + 1;
+                }
+                else 
+                {
+                                  
+                    y = y + 1;                   
+                }
+            }
+            Console.WriteLine("奇數有" + y+"個");
+            Console.WriteLine("偶數有" + x +"個");
+        }
+    }
+}
