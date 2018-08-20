@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 排列大小
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+               int[] nums = { 44, 66, 99, 100, 78 };
+            for(int a=1; a<nums.Length;a+=1)
+            {
+                for (int c = 0; c < nums.Length - a; c += 1)
+                {
+                    if (nums[c + 1] > nums[c])
+                    {
+                        int b = nums[c];
+                        nums[c] = nums[c + 1];
+                        nums[c + 1] = b;
+                    }
+                    Console.Write(nums[c] + " ");
+                }
+                Console.WriteLine();
+            }
+            for (int j = 0; j < nums.Length; j += 1)
+            { Console.Write(nums[j]+" "); }
+        }
+        }
+    }
